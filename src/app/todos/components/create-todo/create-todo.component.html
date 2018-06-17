@@ -1,0 +1,13 @@
+
+<p>
+  <label> Name: </label>
+  <input type="text" #name />
+</p>
+<p>
+  <label> Active: </label>
+  <input type="checkbox" #active />
+</p>
+<p>
+  <input type="button" value="add"
+  (click)="addTodo(name.value, active.checked)" />
+</p>

@@ -1,0 +1,9 @@
+<p>
+  todos-list works!
+</p>
+
+<p *ngFor="let todo of todos; let i = index">
+  {{ ' name is ' + todo.name + ', active : ' + todo.active }}
+  <input type="button" value="delete"
+  (click)="deleteTodo(i)" />
+</p>
