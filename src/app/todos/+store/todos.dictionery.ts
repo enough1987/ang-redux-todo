@@ -4,9 +4,4 @@ export class Todo {
   active: boolean;
 }
 
-export interface State {
-  todos: Todo[];
-}
-export const initialState: State = {
-  todos: []
-};
+export const TODO_FEATURE_NAME = 'todos';

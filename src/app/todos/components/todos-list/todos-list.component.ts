@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Store, StoreFieldNames } from '../../../+store/store';
+import { Store } from '../../../+store/store';
 import { Todo } from '../../+store/todos.dictionery';
 import { DeleteTodo } from '../../+store/todos.actions';
 
@@ -10,7 +10,7 @@ import { DeleteTodo } from '../../+store/todos.actions';
 })
 export class TodosListComponent implements OnInit {
 
-  todosStore = Store.select(StoreFieldNames.TODOS);
+  todosStore = Store.select();
   todos: Todo[];
 
   constructor() { }

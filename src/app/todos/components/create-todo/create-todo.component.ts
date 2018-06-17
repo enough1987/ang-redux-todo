@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Store, StoreFieldNames } from '../../../+store/store';
+import { Store } from '../../../+store/store';
 import { AddTodo } from '../../+store/todos.actions';
 
 @Component({
@@ -9,7 +9,7 @@ import { AddTodo } from '../../+store/todos.actions';
 })
 export class CreateTodoComponent implements OnInit {
 
-  todosStore = Store.select(StoreFieldNames.TODOS);
+  todosStore = Store.select();
 
   constructor() { }
 

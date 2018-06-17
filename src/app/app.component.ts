@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AddTodo } from './todos/+store/todos.actions';
-import { StoreFieldNames, Store } from './+store/store';
+import { Store } from './+store/store';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +9,12 @@ import { StoreFieldNames, Store } from './+store/store';
 })
 export class AppComponent implements OnInit {
 
-  todosStore = Store.select(StoreFieldNames.TODOS);
+  todosStore = Store.select();
 
   ngOnInit() {
     this.todosStore.dispatch(AddTodo({name: 'test', active: false}));
     this.todosStore.dispatch(AddTodo({name: 'test 2 ', active: true}));
+    this.todosStore.dispatch(AddTodo({name: 'test 3 ', active: true}));
+    this.todosStore.dispatch(AddTodo({name: 'test 4 ', active: true}));
   }
 }
